@@ -33,6 +33,18 @@ SMSBuilder is a Phonegap Build compatible plugin for sending SMS on iOS.
 	},'3424221122,2134463330', 'hello');
 ````````
 
+#### Known bug #####
+
+It seems that the code isn't executed in Phonegap Build :( 
+Until we manage to fix this issue, you can use the plugin by calling it directly using `cordova.exec`:
+```javascript
+cordova.exec(null, null, "SMSBuilder", "showSMSBuilder", [{"toRecipients": "3424221122,2134463330", "body": "hello"}]);
+```
+instead of
+```javascript
+window.plugins.smsBuilder.showSMSBuilder('3424221122,2134463330', "hello");
+```
+
 ## Special thanks ##
 
 We would like to say thanks to Grant Sanders (https://github.com/phonegap/phonegap-plugins/blob/master/iPhone/SMSComposer/) for inspiration, for the code we have (re)used and for doing such a great job for the open-source community!
