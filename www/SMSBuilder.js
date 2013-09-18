@@ -41,7 +41,7 @@ SMSBuilder.prototype._didFinishWithResult = function(res)
 	this.resultCallback(res);
 }
 
-PhoneGap.addConstructor(function() {
+cordova.addConstructor(function() {
                         
     if(!window.plugins)	{
         window.plugins = {};
