@@ -46,5 +46,10 @@ PhoneGap.addConstructor(function() {
     if(!window.plugins)	{
         window.plugins = {};
     }
+	
+	if (!window.Cordova) {
+		window.Cordova = cordova;
+	}
+	
     window.plugins.smsBuilder = new SMSBuilder();
 });
