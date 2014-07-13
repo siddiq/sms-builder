@@ -33,7 +33,7 @@ SMSBuilder.prototype.showSMSBuilder = function(toRecipients, body)
 SMSBuilder.prototype.showSMSBuilderWithCB = function(cbFunction,toRecipients,body)
 {
 	this.resultCallback = cbFunction;
-	this.showSMSBuilder.apply(this,[toRecipients,body]);
+	this.showSMSBuilder.apply(this, toRecipients, body);
 }
 
 SMSBuilder.prototype._didFinishWithResult = function(res)
